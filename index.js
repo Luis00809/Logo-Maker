@@ -43,6 +43,6 @@ if(response.shapeChoice === 'circle') {
 }
 console.log(shape)
 const svg = createDocument(shape);
-writeFile('logo.svg', svg, (err) => 
+writeFile('./examples/logo.svg', svg, (err) => 
 err ? console.error(err) : console.log('Success'));
 })
