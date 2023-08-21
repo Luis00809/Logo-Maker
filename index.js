@@ -41,8 +41,13 @@ if(response.shapeChoice === 'circle') {
 } else if (response.shapeChoice === 'square'){
     shape = new Square(response.shapeColor, response.characters, response.textColor )
 }
-console.log(shape)
+console.log(shape);
+// how to change format into .catch
 const svg = createDocument(shape);
 writeFile('./examples/logo.svg', svg, (err) => 
 err ? console.error(err) : console.log('Success'));
+}).then(() => console.log('logo file added!'))
+.catch((err) => {
+    console.log(err);
+    console.log('something went wrong :/')
 })
