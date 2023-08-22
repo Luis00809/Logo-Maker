@@ -16,7 +16,7 @@ inquirer.prompt([
     }, 
     {
         type: 'input',
-        message: 'What color would you like to use?',
+        message: 'What color would you like the shape to be?',
         name: 'shapeColor'
     },
     {
@@ -46,8 +46,8 @@ console.log(shape);
 const svg = createDocument(shape);
 writeFile('./examples/logo.svg', svg, (err) => 
 err ? console.error(err) : console.log('Success'));
-}).then(() => console.log('logo file added!'))
+}).then(() => console.log('Generated logo.svg'))
 .catch((err) => {
     console.log(err);
-    console.log('something went wrong :/')
+    console.log('something went wrong')
 })
